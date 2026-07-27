@@ -4,7 +4,7 @@
   "module_id": "dynamic_conversation_exporter",
   "name": "Dynamic Conversation Exporter",
   "version": "1.5.0",
-  "integration_revision": 1,
+  "integration_revision": 2,
   "branch": "main",
   "install_directory": "modules\\dynamic_conversation_exporter",
   "repository": "https://github.com/1777maxim7771/Dynamic_Conversation_Exporter",
@@ -49,6 +49,6 @@
     "packages/Dynamic_Conversation_Exporter_v1.5.0.part10.b64",
     "packages/Dynamic_Conversation_Exporter_v1.5.0.part11.b64"
   ],
-  "package_sha256": "98a035a8bba707d68e8db5275de70efb64da944e06ae8522ad7827e99eb1315f",
+  "package_sha256": "fe167b169760e83d6c6e5432a350e2d0fcbb4aa0245c322ee830602831a26e5e",
   "package_size_bytes": 74922
 }
