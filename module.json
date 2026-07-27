@@ -1,0 +1,42 @@
+{
+  "schema_version": 1,
+  "platform_api": 1,
+  "id": "dynamic_conversation_exporter",
+  "module_id": "dynamic_conversation_exporter",
+  "name": "Dynamic Conversation Exporter",
+  "display_name": "Dynamic Conversation Exporter",
+  "version": "1.5.0",
+  "description": "Exports ChatGPT conversations through the AutomationPlatform Chrome Debug (CDP 9222) connection.",
+  "repository": "https://github.com/1777maxim7771/Dynamic_Conversation_Exporter",
+  "source_url": "https://github.com/1777maxim7771/Dynamic_Conversation_Exporter",
+  "entry": "00_START_ALL.cmd",
+  "entrypoint": "00_START_ALL.cmd",
+  "requirements": "requirements.txt",
+  "requires": {
+    "python_runtime": true,
+    "chrome_debug": true,
+    "cdp_port": 9222
+  },
+  "preserve_on_update": [
+    "exports",
+    "logs",
+    "panel_position.json",
+    "config.json"
+  ],
+  "commands": [
+    {
+      "id": "conversation_exporter.start",
+      "title": "Start Dynamic Conversation Exporter",
+      "description": "Starts the exporter panel and connects to Chrome Debug on port 9222.",
+      "type": "cmd",
+      "entry": "00_START_ALL.cmd"
+    },
+    {
+      "id": "conversation_exporter.check",
+      "title": "Check Dynamic Conversation Exporter",
+      "description": "Checks Python requirements and Chrome CDP connectivity.",
+      "type": "cmd",
+      "entry": "04_CHECK_ENVIRONMENT.cmd"
+    }
+  ]
+}
