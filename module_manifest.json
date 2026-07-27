@@ -1,10 +1,10 @@
 {
-  "schema_version": 2,
+  "schema_version": 3,
   "platform_api": 1,
   "module_id": "dynamic_conversation_exporter",
   "name": "Dynamic Conversation Exporter",
-  "version": "1.5.0",
-  "integration_revision": 4,
+  "version": "1.6.0",
+  "integration_revision": 5,
   "branch": "main",
   "install_directory": "modules\\dynamic_conversation_exporter",
   "repository": "https://github.com/1777maxim7771/Dynamic_Conversation_Exporter",
@@ -20,7 +20,7 @@
     "pip_check": true,
     "warnings_are_nonfatal_when_exit_code_is_zero": true
   },
-  "entry": "00_START_ALL.cmd",
+  "entry": "main.py",
   "ui": {
     "mode": "embedded",
     "ui_api": 1,
@@ -32,15 +32,17 @@
     "cache_view": true,
     "single_window": true,
     "standalone_fallback": "00_START_ALL.cmd",
-    "backend_mode": "in_process_worker",
+    "backend_mode": "original_v1_6_in_process",
     "backend_class": "chatgpt_exporter.app:ExporterApplication",
-    "source_profile": "v1.5_SEMANTIC_I18N_20260726"
+    "panel_class": "chatgpt_exporter.floating_panel:FloatingControlPanel",
+    "source_profile": "v1.6_PARTIAL_PAIRS_ATTACHMENTS_20260727"
   },
   "required_files": [
     "module.json",
     "main.py",
     "requirements.txt",
     "config.json",
+    "embedded_panel.py",
     "chatgpt_exporter\\__init__.py",
     "chatgpt_exporter\\app.py",
     "chatgpt_exporter\\floating_panel.py",
@@ -54,20 +56,29 @@
     "panel_position.json",
     "config.json"
   ],
+  "source_validation": {
+    "reject_null_bytes": true,
+    "compile_python_tree": true,
+    "import_modules": [
+      "chatgpt_exporter.app",
+      "chatgpt_exporter.floating_panel",
+      "chatgpt_exporter.i18n",
+      "chatgpt_exporter.storage",
+      "embedded_panel"
+    ]
+  },
   "package_encoding": "base64-parts",
   "package_parts": [
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part01.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part02.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part03.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part04.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part05.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part06.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part07.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part08.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part09.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part10.b64",
-    "packages/Dynamic_Conversation_Exporter_v1.5.0.part11.b64"
+    "packages/Dynamic_Conversation_Exporter_v1.6.0.part01.b64",
+    "packages/Dynamic_Conversation_Exporter_v1.6.0.part02.b64",
+    "packages/Dynamic_Conversation_Exporter_v1.6.0.part03.b64",
+    "packages/Dynamic_Conversation_Exporter_v1.6.0.part04.b64",
+    "packages/Dynamic_Conversation_Exporter_v1.6.0.part05.b64",
+    "packages/Dynamic_Conversation_Exporter_v1.6.0.part06.b64",
+    "packages/Dynamic_Conversation_Exporter_v1.6.0.part07.b64",
+    "packages/Dynamic_Conversation_Exporter_v1.6.0.part08.b64"
   ],
-  "package_sha256": "fe167b169760e83d6c6e5432a350e2d0fcbb4aa0245c322ee830602831a26e5e",
-  "package_size_bytes": 74922
+  "package_sha256": "04a520700336cfe39d778720ef99dbbc3259ed48c0fbc90de5197692433415cd",
+  "package_size_bytes": 87870,
+  "source_zip_original_sha256": "28206e9169b322ad3db2ca4265b8579144679cadc6947a195dc86e5b36db0039"
 }
