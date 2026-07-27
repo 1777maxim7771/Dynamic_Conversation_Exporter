@@ -4,11 +4,22 @@
   "module_id": "dynamic_conversation_exporter",
   "name": "Dynamic Conversation Exporter",
   "version": "1.5.0",
-  "integration_revision": 2,
+  "integration_revision": 3,
   "branch": "main",
   "install_directory": "modules\\dynamic_conversation_exporter",
   "repository": "https://github.com/1777maxim7771/Dynamic_Conversation_Exporter",
   "requirements": "requirements.txt",
+  "dependency_imports": [
+    "playwright",
+    "markdownify",
+    "pyvda"
+  ],
+  "dependency_policy": {
+    "python_scope": "platform_local_runtime",
+    "upgrade_strategy": "only-if-needed",
+    "pip_check": true,
+    "warnings_are_nonfatal_when_exit_code_is_zero": true
+  },
   "entry": "00_START_ALL.cmd",
   "ui": {
     "mode": "embedded",
