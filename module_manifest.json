@@ -4,7 +4,7 @@
   "module_id": "dynamic_conversation_exporter",
   "name": "Dynamic Conversation Exporter",
   "version": "1.5.0",
-  "integration_revision": 3,
+  "integration_revision": 4,
   "branch": "main",
   "install_directory": "modules\\dynamic_conversation_exporter",
   "repository": "https://github.com/1777maxim7771/Dynamic_Conversation_Exporter",
@@ -31,14 +31,22 @@
     "menu_group": "modules",
     "cache_view": true,
     "single_window": true,
-    "standalone_fallback": "00_START_ALL.cmd"
+    "standalone_fallback": "00_START_ALL.cmd",
+    "backend_mode": "in_process_worker",
+    "backend_class": "chatgpt_exporter.app:ExporterApplication",
+    "source_profile": "v1.5_SEMANTIC_I18N_20260726"
   },
   "required_files": [
     "module.json",
     "main.py",
     "requirements.txt",
+    "config.json",
+    "chatgpt_exporter\\__init__.py",
     "chatgpt_exporter\\app.py",
-    "chatgpt_exporter\\floating_panel.py"
+    "chatgpt_exporter\\floating_panel.py",
+    "chatgpt_exporter\\i18n.py",
+    "chatgpt_exporter\\storage.py",
+    "chatgpt_exporter\\exporter.js"
   ],
   "preserve_on_update": [
     "exports",
